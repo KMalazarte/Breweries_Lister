@@ -28,17 +28,25 @@ class TopPage extends Component {
   }
 
   render() {
-    console.log("%c breweries state",'color: blue', this.state.selectedBrewery);
+    // console.log("%c breweries state",'color: blue', this.state.selectedBrewery);
     // console.log("%c breweries state",'color: orange', this.state.breweries);
-    return (
-      <Fragment>
-        <h1> ATL BREWERIES </h1>
-        <BreweriesContainer
-          breweries={this.state.breweries}
-          clickHandler={this.clickHandler}
-        />
-      </Fragment>
-    )
+    if (this.state.clicked === false) {
+      return (
+        <Fragment>
+          <h1> ATL BREWERIES </h1>
+          <BreweriesContainer
+            breweries={this.state.breweries}
+            clickHandler={this.clickHandler}
+          />
+        </Fragment>
+      )
+    } else {
+      return (
+        <Fragment>
+          <h1> Specific brewery! </h1>
+        </Fragment>
+      )
+    }
   }
 
 }

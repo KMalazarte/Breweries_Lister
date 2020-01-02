@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SingleBrewery = (props) => {
+const SingleBreweryItem = (props) => {
 
     // console.log("%c single breweries props",'color: blue', props);
 
@@ -17,4 +17,4 @@ const SingleBrewery = (props) => {
 
 }
 
-export default SingleBrewery;
+export default SingleBreweryItem;

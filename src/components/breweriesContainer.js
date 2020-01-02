@@ -1,11 +1,11 @@
 import React from 'react';
-import SingleBrewery from './singleBrewery.js'
+import SingleBreweryItem from './singleBreweryItem.js'
 
 const BreweriesContainer = props => {
 
   const brewery = props.breweries.map( brewery =>
     <div>
-      <SingleBrewery
+      <SingleBreweryItem
         id = {brewery.id}
         key = {brewery.id}
         name = {brewery.name}
