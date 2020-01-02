@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
+import BreweriesContainer from './breweriesContainer.js'
 
-class BreweriesList extends Component {
+class TopPage extends Component {
 
   state={
     breweries: [],
@@ -11,28 +12,23 @@ class BreweriesList extends Component {
     fetch('https://api.openbrewerydb.org/breweries?by_city=Atlanta')
       .then( resp => resp.json() )
       .then( breweries => {
-        console.log("%c breweries array",'color: firebrick', breweries);
         this.setState({
           breweries: breweries
         })
       })
   }
 
-  // .then(moviesArr =>  {
-    //     // console.log(moviesArr.movies);
-    //     this.setState({
-    //     movies: moviesArr.movies
-    //     })
-
   render() {
-    console.log("%c breweries state",'color: blue', this.state.breweries);
+    // console.log("%c breweries state",'color: blue', this.state.breweries);
     return (
       <Fragment>
-        <div>Hello from breweries list</div>
+        <BreweriesContainer
+          breweries={this.state.breweries}
+        />
       </Fragment>
     )
   }
 
 }
 
-export default BreweriesList;
+export default TopPage;

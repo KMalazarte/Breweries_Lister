@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import BreweriesList from './components/breweriesList.js'
+import TopPage from './components/topPage.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <BreweriesList/>
+        <TopPage/>
       </header>
     </div>
   );
