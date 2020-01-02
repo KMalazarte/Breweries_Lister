@@ -22,6 +22,7 @@ class TopPage extends Component {
     // console.log("%c breweries state",'color: blue', this.state.breweries);
     return (
       <Fragment>
+        <h1> ATL BREWERIES </h1>
         <BreweriesContainer
           breweries={this.state.breweries}
         />
