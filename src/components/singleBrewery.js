@@ -2,14 +2,16 @@ import React from 'react';
 
 const SingleBrewery = (props) => {
 
+    // console.log("%c single breweries props",'color: blue', props);
+
   const address = props.street + " " + props.city + ", " + props.state + " " + props.zip_code
 
   return (
-      <p>
+      <p id={props.id} onClick={props.clickHandler}>
         <div>Name: {props.name}</div>
         <div>Type: {props.type}</div>
         <div>Address: {address}</div>
-        <div>Clickable Website: {props.website}</div>
+        <a href={props.website} target="_blank" rel="noopener noreferrer">{props.website}</a>
       </p>
     )
 

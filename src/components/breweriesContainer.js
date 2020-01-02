@@ -6,6 +6,7 @@ const BreweriesContainer = props => {
   const brewery = props.breweries.map( brewery =>
     <div>
       <SingleBrewery
+        id = {brewery.id}
         key = {brewery.id}
         name = {brewery.name}
         type = {brewery.brewery_type}
@@ -14,6 +15,7 @@ const BreweriesContainer = props => {
         state = {brewery.state}
         zip_code = {brewery.postal_code}
         website = {brewery.website_url}
+        clickHandler = {props.clickHandler}
       />
     </div>
   )
