@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
 import BreweryDetails from './breweryDetails.js'
+import { Header } from 'semantic-ui-react'
 
 class TopPage extends Component {
 
@@ -40,7 +41,7 @@ class TopPage extends Component {
     if (this.state.clicked === false) {
       return (
         <Fragment>
-          <h1> ATL BREWERIES </h1>
+          <Header as='h1' color="red">Atlanta Breweries</Header>
           <BreweriesContainer
             breweries={this.state.breweries}
             clickHandler={this.clickHandler}
