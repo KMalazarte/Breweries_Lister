@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
+import BreweryDetails from './breweryDetails.js'
 
 class TopPage extends Component {
 
@@ -27,6 +28,13 @@ class TopPage extends Component {
     })
   }
 
+  goBackHandler = e => {
+    console.log("Go back clicked");
+    this.setState({
+      clicked: false
+    })
+  }
+
   render() {
     // console.log("%c breweries state",'color: blue', this.state.selectedBrewery);
     // console.log("%c breweries state",'color: orange', this.state.breweries);
@@ -43,7 +51,10 @@ class TopPage extends Component {
     } else {
       return (
         <Fragment>
-          <h1> Specific brewery! </h1>
+          <BreweryDetails
+            selectedBrewery={this.state.selectedBrewery}
+            goBackHandler={this.goBackHandler}
+          />
         </Fragment>
       )
     }
