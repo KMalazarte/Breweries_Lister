@@ -1,4 +1,5 @@
 import React from 'react';
+import GoogleMap from './googleMap.js'
 
 const BreweryDetails = (props) => {
 
@@ -8,10 +9,13 @@ const BreweryDetails = (props) => {
 
   return (
     <div>
-      <button onClick={props.goBackHandler}>Go Back to breweries list</button> 
+      <button onClick={props.goBackHandler}>Go Back to breweries list</button>
       <h1> {props.selectedBrewery.name} </h1>
       <p> {address} </p>
-      <p> map </p>
+      <GoogleMap
+        lat= {props.selectedBrewery.latitude}
+        lng= {props.selectedBrewery.longitude}
+      />
     </div>
   )
 }

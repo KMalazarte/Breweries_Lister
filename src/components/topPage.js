@@ -29,7 +29,6 @@ class TopPage extends Component {
   }
 
   goBackHandler = e => {
-    console.log("Go back clicked");
     this.setState({
       clicked: false
     })
