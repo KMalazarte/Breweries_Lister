@@ -1,12 +1,10 @@
 import React from 'react';
 import SingleBreweryItem from './singleBreweryItem.js'
-import { Divider } from 'semantic-ui-react'
 
 const BreweriesContainer = props => {
 
   const brewery = props.breweries.map( brewery =>
     <div>
-      <Divider />
       <SingleBreweryItem
         id = {brewery.id}
         key = {brewery.id}

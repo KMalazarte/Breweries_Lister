@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleMap from './googleMap.js'
-import { Button } from 'semantic-ui-react'
+import { Button, } from 'semantic-ui-react'
 
 const BreweryDetails = (props) => {
 
@@ -10,7 +10,7 @@ const BreweryDetails = (props) => {
 
   return (
     <div>
-      <Button onClick={props.goBackHandler}>Go Back to list of breweries</Button>
+      <Button onClick={props.goBackHandler}>Go Back to list of breweries </Button>
         <h1> {props.selectedBrewery.name} </h1>
         <p> {address} </p>
         <GoogleMap
