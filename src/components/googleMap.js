@@ -6,7 +6,7 @@ class GoogleMap extends Component {
 
   render() {
 
-    const Marker = ({ text }) => <div id="marker">{text}</div>
+    const Marker = ({ text }) => <span role="img">"🍺"</span>
 
     const handleApiLoaded = (map, maps) => {
       // use map and maps objects
@@ -26,7 +26,7 @@ class GoogleMap extends Component {
       }
     }
 
-    const zoom = 15
+    const zoom = 14
 
     console.log("%c google map props",'color: orange', this.props);
 
@@ -47,7 +47,7 @@ class GoogleMap extends Component {
         <Marker
           lat={this.props.lat}
           lng={this.props.lng}
-          text="My Marker"
+          text="🍺"
         />
         </GoogleMapReact>
 

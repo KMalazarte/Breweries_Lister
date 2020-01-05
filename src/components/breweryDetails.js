@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleMap from './googleMap.js'
-import { Button, } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 const BreweryDetails = (props) => {
 
