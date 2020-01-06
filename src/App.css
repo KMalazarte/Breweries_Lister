@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #242a35;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,38 @@
   color: #61dafb;
 }
 
-.divider {
-  color: orange
+#button_2 {
+  margin-top: 25px;
+}
+
+.site {
+  margin-top: 0px;
+}
+
+#address_span {
+  color: gold;
+  margin-bottom: 30px;
+}
+
+.brewery_name {
+  font-size: calc(16px + 2vmin);
+  font-weight: 600
+}
+
+.desc_container{
+  margin-bottom: 2px;
+}
+
+.brewery_address {
+  font-size: calc(7px + 2vmin)
+}
+
+.brewery_type {
+  font-size: calc(7px + 2vmin);
+  line-height: 1.3em
+}
+
+.brewery_link {
+  font-size: calc(7px + 2vmin);
+  line-height: 1.3em
 }

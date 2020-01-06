@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import SingleBreweryItem from './singleBreweryItem.js'
 import { Divider, } from 'semantic-ui-react'
 
 const BreweriesContainer = props => {
 
   const brewery = props.breweries.map( brewery =>
-    <div>
+    <Fragment>
       <Divider />
       <SingleBreweryItem
         id = {brewery.id}
@@ -19,7 +19,7 @@ const BreweriesContainer = props => {
         website = {brewery.website_url}
         clickHandler = {props.clickHandler}
       />
-    </div>
+    </Fragment>
   )
 
     return (
