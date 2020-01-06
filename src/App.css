@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #242a35;
+  background-color: #36393d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -98,4 +98,8 @@
   margin-top: 1.3rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+#marker{
+  font-size:1.8rem
 }
