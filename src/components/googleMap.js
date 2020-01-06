@@ -8,9 +8,9 @@ class GoogleMap extends Component {
 
     const Marker = ({ text }) => <span role="img">"🍺"</span>
 
-    const handleApiLoaded = (map, maps) => {
-      // use map and maps objects
-    };
+    // const handleApiLoaded = (map, maps) => {
+    //    //use map and maps objects
+    // };
 
     let center = {}
 
@@ -32,7 +32,7 @@ class GoogleMap extends Component {
 
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '60vh', width: '60vh' }}>
+      <div id="map">
         <GoogleMapReact
           bootstrapURLKeys={{
            key: process.env.REACT_APP_GOOGLE_API_KEY,
@@ -41,8 +41,6 @@ class GoogleMap extends Component {
           }}
           defaultCenter={center}
           defaultZoom={zoom}
-          yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         >
         <Marker
           lat={this.props.lat}

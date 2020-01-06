@@ -15,10 +15,10 @@ const BreweryDetails = (props) => {
         <Icon name='left arrow'/>
         Go Back to list of breweries
       </Button>
-      <Header as="h1" color="orange">
+      <Header as="h1" id="details_name">
         {props.selectedBrewery.name}
       </Header>
-      <span> {address} </span>
+      <span id="details_address"> {address} </span>
       <GoogleMap
         lat= {props.selectedBrewery.latitude}
         lng= {props.selectedBrewery.longitude}

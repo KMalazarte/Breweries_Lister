@@ -41,8 +41,8 @@ class TopPage extends Component {
     if (this.state.clicked === false) {
       return (
         <Fragment>
-          <Header as='h1' color="red">🍻 Atlanta Breweries 🍻</Header>
-          <Header as='h2' color="yellow">Click a brewery to see more about it</Header>
+          <Header id= "title">🍑 Atlanta Breweries 🍻</Header>
+          <Header id= "instuctions" as='h2'>Click a brewery to see more about it</Header>
           <BreweriesContainer
             breweries={this.state.breweries}
             clickHandler={this.clickHandler}

@@ -28,8 +28,21 @@
   color: #61dafb;
 }
 
+#title {
+  font-size: 4rem ;
+  color: red;
+  margin-top: .5rem;
+  margin-bottom: .3rem
+}
+
+#instuctions {
+  color: gold;
+  margin-top: .2rem;
+  margin-bottom: .3rem
+}
+
 #button_2 {
-  margin-top: 25px;
+  margin-top: 1rem;
 }
 
 .site {
@@ -38,11 +51,11 @@
 
 #address_span {
   color: gold;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 
 .brewery_name {
-  font-size: calc(16px + 2vmin);
+  font-size: 2.3rem;
   font-weight: 600
 }
 
@@ -51,15 +64,38 @@
 }
 
 .brewery_address {
-  font-size: calc(7px + 2vmin)
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  margin-top: .4rem;
+  margin-bottom: .4rem
 }
 
 .brewery_type {
-  font-size: calc(7px + 2vmin);
-  line-height: 1.3em
+  font-size: 1.6rem;
+  line-height: 1.5rem
 }
 
 .brewery_link {
-  font-size: calc(7px + 2vmin);
-  line-height: 1.3em
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  margin-top: 1rem
+}
+
+#details_name{
+  color: red;
+  font-size: 2.5rem;
+  margin-top: .5rem
+}
+
+#details_address{
+  color: gold;
+  margin-bottom: 3rem
+}
+
+#map{
+  height:60vh ;
+  width:60vh;
+  margin-top: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
