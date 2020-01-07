@@ -46,7 +46,7 @@ class GoogleMap extends Component {
       )
     } else {
       return (
-        <Header content="Sorry, map not available"/>
+        <Header id="sorry" content="Sorry, map not available"/>
       )
     }
   }

@@ -1,8 +1,9 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
 import BreweryDetails from './breweryDetails.js'
-import { Header, Image, Grid, Container } from 'semantic-ui-react'
+import { Header, Grid, Container } from 'semantic-ui-react'
 import LeftImagesContainer from './leftImagesContainer'
+import RightImagesContainer from './rightImagesContainer'
 
 class TopPage extends Component {
 
@@ -44,20 +45,22 @@ class TopPage extends Component {
         <Fragment>
           <Grid columns={3}>
             <Grid.Column center width={4}>
-              <Container className="lefty">
-                <LeftImagesContainer/>
+              <Container id="sticky">
+                <LeftImagesContainer/>            
               </Container>
             </Grid.Column>
             <Grid.Column width={8}>
-              <Header id="title">🍑Atlanta Breweries🍻</Header>
-              <Header id="instuctions" as='h2'>Click a brewery to see more about it</Header>
+              <Header id="title">Atlanta Breweries</Header>
+              <Header id="instuctions" as='h2'>Click on a brewery to see details</Header>
               <BreweriesContainer
                   breweries={this.state.breweries}
                   clickHandler={this.clickHandler}
               />
             </Grid.Column>
-            <Grid.Column  floated='right' width={4}>
-
+            <Grid.Column center width={4}>
+              <Container id="sticky">
+                <RightImagesContainer/>
+              </Container>
             </Grid.Column>
           </Grid>
         </Fragment>

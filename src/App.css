@@ -42,7 +42,7 @@
 }
 
 #address_span {
-  color: gold;
+  color: #a99924fa;
   margin-bottom: 1rem;
 }
 
@@ -82,12 +82,12 @@
 }
 
 #details_address{
-  color: gold;
+  color: #a99924fa;
   margin-bottom: 3rem
 }
 
 #map{
-  height:60vh ;
+  height:60vh;
   width:60vh;
   margin-top: 1.3rem;
   margin-left: auto;
@@ -98,11 +98,15 @@
   font-size:1.8rem
 }
 
-.ui.image.sticky{
+#sticky{
   position: sticky;
   top: 0
 }
 
-.ui.container.lefty{
-  display: flex;
+.image.with.margin{
+  margin-bottom: 2.5rem
+}
+
+#sorry{
+  color: white
 }
