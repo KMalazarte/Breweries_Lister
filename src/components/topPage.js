@@ -1,7 +1,8 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
 import BreweryDetails from './breweryDetails.js'
-import { Header } from 'semantic-ui-react'
+import { Header, Image, Grid, Container } from 'semantic-ui-react'
+import LeftImagesContainer from './leftImagesContainer'
 
 class TopPage extends Component {
 
@@ -41,12 +42,24 @@ class TopPage extends Component {
     if (this.state.clicked === false) {
       return (
         <Fragment>
-          <Header id= "title">🍑 Atlanta Breweries 🍻</Header>
-          <Header id= "instuctions" as='h2'>Click a brewery to see more about it</Header>
-          <BreweriesContainer
-            breweries={this.state.breweries}
-            clickHandler={this.clickHandler}
-          />
+          <Grid columns={3}>
+            <Grid.Column center width={4}>
+              <Container className="lefty">
+                <LeftImagesContainer/>
+              </Container>
+            </Grid.Column>
+            <Grid.Column width={8}>
+              <Header id="title">🍑Atlanta Breweries🍻</Header>
+              <Header id="instuctions" as='h2'>Click a brewery to see more about it</Header>
+              <BreweriesContainer
+                  breweries={this.state.breweries}
+                  clickHandler={this.clickHandler}
+              />
+            </Grid.Column>
+            <Grid.Column  floated='right' width={4}>
+
+            </Grid.Column>
+          </Grid>
         </Fragment>
       )
     } else {

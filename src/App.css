@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #36393d;
+  background-color: #181717;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,14 +29,14 @@
 }
 
 #title {
-  font-size: 4rem ;
+  font-size: 3.5rem ;
   color: red;
   margin-top: .5rem;
   margin-bottom: .3rem
 }
 
 #instuctions {
-  color: gold;
+  color: white;
   margin-top: .2rem;
   margin-bottom: .3rem
 }
@@ -55,6 +55,7 @@
 }
 
 .brewery_name {
+  color: #a99924fa;
   font-size: 2.3rem;
   font-weight: 600
 }
@@ -102,4 +103,13 @@
 
 #marker{
   font-size:1.8rem
+}
+
+.ui.image.sticky{
+  position: sticky;
+  top: 0
+}
+
+.ui.container.lefty{
+  display: flex;
 }
