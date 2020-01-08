@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
 import BreweryDetails from './breweryDetails.js'
-import { Header, Grid, Container } from 'semantic-ui-react'
+import { Header, Grid, Container, Button } from 'semantic-ui-react'
 import LeftImagesContainer from './leftImagesContainer'
 import RightImagesContainer from './rightImagesContainer'
 
@@ -13,8 +13,12 @@ class TopPage extends Component {
     selectedBrewery: ""
   }
 
+
+
   componentDidMount() {
-    fetch('https://api.openbrewerydb.org/breweries?by_city=Atlanta')
+    // let openBreweryDB = 'https://api.openbrewerydb.org/breweries?by_city=Atlanta'
+    let railsAPI = 'http://localhost:3000/breweries'
+    fetch(railsAPI)
       .then( resp => resp.json() )
       .then( breweries => {
         this.setState({
@@ -46,7 +50,7 @@ class TopPage extends Component {
           <Grid columns={3}>
             <Grid.Column center width={4}>
               <Container id="sticky">
-                <LeftImagesContainer/>            
+                <LeftImagesContainer/>
               </Container>
             </Grid.Column>
             <Grid.Column width={8}>
@@ -56,6 +60,7 @@ class TopPage extends Component {
                   breweries={this.state.breweries}
                   clickHandler={this.clickHandler}
               />
+              <Button />
             </Grid.Column>
             <Grid.Column center width={4}>
               <Container id="sticky">

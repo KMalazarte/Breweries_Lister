@@ -5,9 +5,17 @@ import { Button, Icon, Header } from 'semantic-ui-react'
 
 const BreweryDetails = (props) => {
 
-  // console.log("%c brewery details props",'color: blue', props);
+  console.log("%c brewery details props",'color: blue', props);
 
   const address = props.selectedBrewery.street + " " + props.selectedBrewery.city + ", " + props.selectedBrewery.state + " " + props.selectedBrewery.postal_code
+
+  let phone = props.selectedBrewery.phone.split("")
+  phone.unshift("(")
+  phone.splice(4,0,")")
+  phone.splice(8,0,"-")
+  let newPhone = phone.join("")
+
+  console.log(newPhone);
 
   return (
     <div>
@@ -19,6 +27,7 @@ const BreweryDetails = (props) => {
         {props.selectedBrewery.name}
       </Header>
       <span id="details_address"> {address} </span>
+      <span id="details_phone"> {newPhone} </span>
       <GoogleMap
         lat= {props.selectedBrewery.latitude}
         lng= {props.selectedBrewery.longitude}

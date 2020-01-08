@@ -110,3 +110,10 @@
 #sorry{
   color: white
 }
+
+#details_phone{
+  display: block;
+  color: white;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem
+}
