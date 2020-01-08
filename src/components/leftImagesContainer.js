@@ -7,7 +7,7 @@ const LeftImagesContainer = () => {
       <Fragment>
           <Image
             src="https://media.gettyimages.com/photos/atlanta-united-celebrates-with-the-mls-cup-after-their-20-over-the-picture-id1070249546?s=2048x2048"
-            alt="FC Champions"
+            alt="A FC Champions"
             className="image with margin"
           />
           <Image

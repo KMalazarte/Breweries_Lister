@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react';
 import SingleBreweryItem from './singleBreweryItem.js'
-import { Divider, } from 'semantic-ui-react'
+import { Divider } from 'semantic-ui-react'
 
 const BreweriesContainer = props => {
 
+  let address = ""
+
   const brewery = props.breweries.map( brewery =>
+
     <Fragment>
       <Divider />
       <SingleBreweryItem

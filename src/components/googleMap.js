@@ -9,15 +9,11 @@ class GoogleMap extends Component {
 
     const Marker = ({ text }) => <span id="marker" role="img">{text}</span>
 
-    // const handleApiLoaded = (map, maps) => {
-    //    //use map and maps objects
-    // };
-
     let center = {}
 
     const zoom = 14
 
-    console.log("%c google map props",'color: orange', this.props);
+    // console.log("%c google map props",'color: orange', this.props);
 
     if (this.props.lat && this.props.lng) {
       center = {
