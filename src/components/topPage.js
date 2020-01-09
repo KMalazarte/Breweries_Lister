@@ -1,7 +1,9 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
 import BreweryDetails from './breweryDetails.js'
-import { Header } from 'semantic-ui-react'
+import { Header, Grid, Container } from 'semantic-ui-react'
+import LeftImagesContainer from './leftImagesContainer'
+import RightImagesContainer from './rightImagesContainer'
 
 class TopPage extends Component {
 
@@ -11,8 +13,11 @@ class TopPage extends Component {
     selectedBrewery: ""
   }
 
+
   componentDidMount() {
-    fetch('https://api.openbrewerydb.org/breweries?by_city=Atlanta')
+    // let openBreweryDB = 'https://api.openbrewerydb.org/breweries?by_city=Atlanta'
+    let railsAPI = 'http://localhost:3000/breweries'
+    fetch(railsAPI)
       .then( resp => resp.json() )
       .then( breweries => {
         this.setState({
@@ -41,12 +46,26 @@ class TopPage extends Component {
     if (this.state.clicked === false) {
       return (
         <Fragment>
-          <Header as='h1' color="red">🍻 Atlanta Breweries 🍻</Header>
-          <Header as='h2' color="yellow">Click a brewery to see more about it</Header>
-          <BreweriesContainer
-            breweries={this.state.breweries}
-            clickHandler={this.clickHandler}
-          />
+          <Grid columns={3}>
+            <Grid.Column center width={4}>
+              <Container id="sticky">
+                <LeftImagesContainer/>
+              </Container>
+            </Grid.Column>
+            <Grid.Column width={8}>
+              <Header id="title">Atlanta Breweries</Header>
+              <Header id="instuctions" as='h2'>Click on a brewery to see details</Header>
+              <BreweriesContainer
+                  breweries={this.state.breweries}
+                  clickHandler={this.clickHandler}
+              />
+            </Grid.Column>
+            <Grid.Column center width={4}>
+              <Container id="sticky">
+                <RightImagesContainer/>
+              </Container>
+            </Grid.Column>
+          </Grid>
         </Fragment>
       )
     } else {
