@@ -24,7 +24,7 @@ class GoogleMap extends Component {
         <div id="map">
           <GoogleMapReact
             bootstrapURLKeys={{
-             key: process.env.REACT_APP_GOOGLE_API_KEY,
+             /*key: process.env.REACT_APP_GOOGLE_API_KEY,*/
              language: 'US',
              region: 'US'
             }}
