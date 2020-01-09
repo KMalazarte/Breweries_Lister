@@ -9,13 +9,19 @@ const BreweryDetails = (props) => {
 
   const address = props.selectedBrewery.street + " " + props.selectedBrewery.city + ", " + props.selectedBrewery.state + " " + props.selectedBrewery.postal_code
 
-  let phone = props.selectedBrewery.phone.split("")
-  phone.unshift("(")
-  phone.splice(4,0,")")
-  phone.splice(8,0,"-")
-  let newPhone = phone.join("")
 
-  console.log(newPhone);
+  let phone = ""
+  if (props.selectedBrewery.phone === "") {
+    phone = "No phone number listed"
+  } else {
+    phone = props.selectedBrewery.phone.split("")
+    phone.unshift("(")
+    phone.splice(4,0,")")
+    phone.splice(8,0,"-")
+    phone.join("")
+  }
+
+  console.log(phone);
 
   return (
     <div>
@@ -27,7 +33,7 @@ const BreweryDetails = (props) => {
         {props.selectedBrewery.name}
       </Header>
       <span id="details_address"> {address} </span>
-      <span id="details_phone"> {newPhone} </span>
+      <span id="details_phone"> {phone} </span>
       <GoogleMap
         lat= {props.selectedBrewery.latitude}
         lng= {props.selectedBrewery.longitude}

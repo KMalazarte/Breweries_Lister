@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import BreweriesContainer from './breweriesContainer.js'
 import BreweryDetails from './breweryDetails.js'
-import { Header, Grid, Container, Button } from 'semantic-ui-react'
+import { Header, Grid, Container } from 'semantic-ui-react'
 import LeftImagesContainer from './leftImagesContainer'
 import RightImagesContainer from './rightImagesContainer'
 
@@ -12,7 +12,6 @@ class TopPage extends Component {
     clicked: false,
     selectedBrewery: ""
   }
-
 
 
   componentDidMount() {
@@ -60,7 +59,6 @@ class TopPage extends Component {
                   breweries={this.state.breweries}
                   clickHandler={this.clickHandler}
               />
-              <Button />
             </Grid.Column>
             <Grid.Column center width={4}>
               <Container id="sticky">
