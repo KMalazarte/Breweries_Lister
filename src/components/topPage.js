@@ -15,9 +15,9 @@ class TopPage extends Component {
 
 
   componentDidMount() {
-    // let openBreweryDB = 'https://api.openbrewerydb.org/breweries?by_city=Atlanta'
+    let openBreweryDB = 'https://api.openbrewerydb.org/breweries?by_city=Atlanta'
     let railsAPI = 'http://localhost:3000/breweries'
-    fetch(railsAPI)
+    fetch(openBreweryDB)
       .then( resp => resp.json() )
       .then( breweries => {
         this.setState({
