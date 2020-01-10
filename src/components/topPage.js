@@ -4,6 +4,7 @@ import BreweryDetails from './breweryDetails.js'
 import { Header, Grid, Container } from 'semantic-ui-react'
 import LeftImagesContainer from './leftImagesContainer'
 import RightImagesContainer from './rightImagesContainer'
+import '../Style.css';
 
 class TopPage extends Component {
 
@@ -17,6 +18,7 @@ class TopPage extends Component {
   componentDidMount() {
     let openBreweryDB = 'https://api.openbrewerydb.org/breweries?by_city=Atlanta'
     let railsAPI = 'http://localhost:3000/breweries'
+    // use railsAPI after running rails s on port 3000
     fetch(openBreweryDB)
       .then( resp => resp.json() )
       .then( breweries => {
@@ -54,7 +56,7 @@ class TopPage extends Component {
             </Grid.Column>
             <Grid.Column width={8}>
               <Header id="title">Atlanta Breweries</Header>
-              <Header id="instuctions" as='h2'>Click on a brewery to see details</Header>
+              <Header id="instructions" as='h2'>Click on a brewery to see details</Header>
               <BreweriesContainer
                   breweries={this.state.breweries}
                   clickHandler={this.clickHandler}
