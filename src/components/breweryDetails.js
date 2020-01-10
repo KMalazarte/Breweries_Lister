@@ -21,7 +21,7 @@ const BreweryDetails = (props) => {
     phone.join("")
   }
 
-  console.log(phone);
+  // console.log(phone);
 
   return (
     <div>

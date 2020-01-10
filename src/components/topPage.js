@@ -18,6 +18,7 @@ class TopPage extends Component {
   componentDidMount() {
     let openBreweryDB = 'https://api.openbrewerydb.org/breweries?by_city=Atlanta'
     let railsAPI = 'http://localhost:3000/breweries'
+    // use railsAPI after running rails s on port 3000
     fetch(openBreweryDB)
       .then( resp => resp.json() )
       .then( breweries => {
