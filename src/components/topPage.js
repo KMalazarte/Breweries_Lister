@@ -4,6 +4,7 @@ import BreweryDetails from './breweryDetails.js'
 import { Header, Grid, Container } from 'semantic-ui-react'
 import LeftImagesContainer from './leftImagesContainer'
 import RightImagesContainer from './rightImagesContainer'
+import '../Style.css';
 
 class TopPage extends Component {
 
@@ -54,7 +55,7 @@ class TopPage extends Component {
             </Grid.Column>
             <Grid.Column width={8}>
               <Header id="title">Atlanta Breweries</Header>
-              <Header id="instuctions" as='h2'>Click on a brewery to see details</Header>
+              <Header id="instructions" as='h2'>Click on a brewery to see details</Header>
               <BreweriesContainer
                   breweries={this.state.breweries}
                   clickHandler={this.clickHandler}
