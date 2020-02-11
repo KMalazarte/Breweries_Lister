@@ -29,7 +29,7 @@ class TopPage extends Component {
   }
 
   clickHandler = e => {
-    let clickedBrewery = this.state.breweries.find(brewery => brewery.id === parseInt(e.currentTarget.id))
+    const clickedBrewery = this.state.breweries.find(brewery => brewery.id === parseInt(e.currentTarget.id))
     this.setState({
       clicked: true,
       selectedBrewery: clickedBrewery
@@ -43,8 +43,6 @@ class TopPage extends Component {
   }
 
   render() {
-    // console.log("%c breweries state",'color: blue', this.state.selectedBrewery);
-    // console.log("%c breweries state",'color: orange', this.state.breweries);
     if (this.state.clicked === false) {
       return (
         <Fragment>
