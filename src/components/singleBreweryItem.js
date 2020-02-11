@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 
 const SingleBreweryItem = (props) => {
 
-    // console.log("%c single breweries props",'color: blue', props);
-
   const address = props.street + " " + props.city + ", " + props.state + " " + props.zip_code
 
   const type = props.type

@@ -5,10 +5,7 @@ import { Button, Icon, Header } from 'semantic-ui-react'
 
 const BreweryDetails = (props) => {
 
-  console.log("%c brewery details props",'color: blue', props);
-
   const address = props.selectedBrewery.street + " " + props.selectedBrewery.city + ", " + props.selectedBrewery.state + " " + props.selectedBrewery.postal_code
-
 
   let phone = ""
   if (props.selectedBrewery.phone === "") {
@@ -20,8 +17,6 @@ const BreweryDetails = (props) => {
     phone.splice(8,0,"-")
     phone.join("")
   }
-
-  // console.log(phone);
 
   return (
     <div>
